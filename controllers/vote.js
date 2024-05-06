@@ -1,5 +1,6 @@
 const parseBody = require("../appModules/http-utils/parse-body");
 const { config, createRating, updateRating, WEIGHT } = require("../appModules/rating");
+const fs = require("fs").promises;
 
 async function voteRouteController(req, res) {
     if (req.method !== "POST") {
@@ -20,6 +21,7 @@ async function voteRouteController(req, res) {
       } catch (error){
         res.statusCode = 500;
         res.end("Internal Server Error");
+        console.log(error);
       }
     }
   }

@@ -9,5 +9,8 @@
     "start": "node app.js"
   },
   "author": "lidels_pastrin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
 }

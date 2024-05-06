@@ -18,15 +18,11 @@ const server = http.createServer((req, res) => {
       break;
     case "/vote":
       voteRouteController(req, res);
+      break;
               
     default:
-        const extname = String(path.extname(url)).toLowerCase();
-        if (extname in mimeTypes) {
           defaultRouteController(res, url);
-        } else {
-         res.statusCode = 404;
-          res.end("Not Found");
-        }
+          break;
     }
   });
 
